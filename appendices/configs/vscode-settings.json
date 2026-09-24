@@ -1,0 +1,41 @@
+{
+  // Recommended VS Code *user* settings for hoardCTI Go work (GO-EDT-003).
+  // Don't commit these to a repository (GO-EDT-002).
+  // Extension: golang.go
+
+  // golangci-lint from the repository's tool directive, not a global install.
+  "go.lintTool": "golangci-lint-v2",
+  "go.lintFlags": ["--fast-only"],
+  "go.alternateTools": {
+    "golangci-lint-v2": "${workspaceFolder}/.bin/golangci-lint"
+  },
+  // Build that shim once per repository with:
+  //   go build -o .bin/golangci-lint github.com/golangci/golangci-lint/v2/cmd/golangci-lint
+  // (.bin/ is git-ignored.)
+
+  "go.testFlags": ["-race", "-shuffle=on"],
+  "go.coverOnSave": false,
+
+  "gopls": {
+    "formatting.gofumpt": true,
+    "formatting.local": "github.com/hoardcti",
+    "ui.semanticTokens": true,
+    // staticcheck runs inside golangci-lint with the repository's settings.
+    "ui.diagnostic.staticcheck": false,
+    "ui.diagnostic.analyses": {
+      "shadow": true
+    }
+  },
+
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.rulers": [100],
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
+  },
+
+  "cSpell.language": "en-GB"
+}
