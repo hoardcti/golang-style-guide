@@ -178,9 +178,8 @@ separate from a failed run.
       - name: Build
         run: make build
       - name: Aggregate
+        # ABUSECH_API_KEY is passed in from the repository secret through env:.
         run: ./bin/aggregate -out out
-        env:
-          ABUSECH_API_KEY: ${{ secrets.ABUSECH_API_KEY }}
 ```
 
 ❌ Bad

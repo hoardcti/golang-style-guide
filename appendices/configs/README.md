@@ -106,4 +106,5 @@ Add a Go step to the `detect` job:
 if [ -f go.mod ]; then echo "go=true" >> "$GITHUB_OUTPUT"; else echo "go=false" >> "$GITHUB_OUTPUT"; fi
 ```
 
-and `go: ${{ steps.detect.outputs.go }}` under the job's `outputs:`.
+then add a `go` entry under the `detect` job's `outputs:` that passes this
+step's `go` output through, the same way the existing `python` output does.

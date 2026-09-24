@@ -55,6 +55,14 @@ rule](foundations/principles.md#how-to-read-a-rule):
 
 ## Style of the guide itself
 
+- The site is built with Jekyll, which reads two opening curly braces, or an
+  opening curly brace followed by a percent sign, as a Liquid template tag,
+  **even inside code blocks and inline code**. Never write either sequence:
+  split nested literals such as `[]Source{` + `{Name: ...}` over several lines,
+  and describe GitHub Actions expressions in words or comments instead of
+  writing them out. Before opening a pull request, search the guide for both
+  sequences; there must be none.
+
 - British English, sentence-case headings, lines wrapped at about 80
   characters in prose.
 - Every page starts with a "Back to contents" link and ends with a "Next" link.

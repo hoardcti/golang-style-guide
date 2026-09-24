@@ -165,7 +165,10 @@ testCases := []struct {
 	{name: "ipv4", input: netip.MustParseAddr("192.0.2.1")},
 }
 
-sources := []Source{{Name: "threatfox"}, {Name: "feodotracker"}}
+sources := []Source{
+	{Name: "threatfox"},
+	{Name: "feodotracker"},
+}
 ```
 
 ❌ Bad
