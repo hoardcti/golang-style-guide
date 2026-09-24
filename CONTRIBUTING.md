@@ -63,6 +63,9 @@ rule](foundations/principles.md#how-to-read-a-rule):
   writing them out. Before opening a pull request, search the guide for both
   sequences; there must be none.
 
+- A new page, or a new rule area, is also added to [`llms.txt`](llms.txt) and,
+  for a new area, to the "Finding a rule" table in [`SKILL.md`](SKILL.md).
+
 - British English, sentence-case headings, lines wrapped at about 80
   characters in prose.
 - Every page starts with a "Back to contents" link and ends with a "Next" link.

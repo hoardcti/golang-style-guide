@@ -1,0 +1,98 @@
+# hoardCTI Go Style Guide
+
+> The style and environment guide for every hoardCTI repository written in Go: 441 rules, each with a stable ID (GO-<AREA>-<NNN>), a MUST/SHOULD/MAY level, reasoning and examples. Several house rules deliberately differ from common Go style.
+
+AI agents: read the skill first. It explains how to access the guide, find a rule by ID, and apply the guide when writing or reviewing code. Every page on this site is available as raw Markdown by using the `.md` path, as in the links below.
+
+## Start here
+
+- [SKILL.md](https://hoardcti.github.io/golang-style-guide/SKILL.md): agent skill describing how to use this guide. Read this first.
+- [Contents](https://hoardcti.github.io/golang-style-guide/README.md): every page, grouped by part
+- [House rules](https://hoardcti.github.io/golang-style-guide/foundations/house-rules.md): the six hoardCTI rules that differ from common Go
+- [Rule index](https://hoardcti.github.io/golang-style-guide/appendices/rule-index.md): every rule ID with its level and title
+- [Review checklist](https://hoardcti.github.io/golang-style-guide/appendices/review-checklist.md): every MUST and MUST NOT rule
+
+## Foundations
+
+- [Principles](https://hoardcti.github.io/golang-style-guide/foundations/principles.md): audience, rule format, IDs, precedence (GO-GEN)
+
+## Environment
+
+- [Toolchain](https://hoardcti.github.io/golang-style-guide/environment/toolchain.md) (GO-ENV)
+- [Modules and dependencies](https://hoardcti.github.io/golang-style-guide/environment/modules-and-dependencies.md) (GO-MOD)
+- [Editor setup](https://hoardcti.github.io/golang-style-guide/environment/editor-setup.md) (GO-EDT)
+- [Makefile](https://hoardcti.github.io/golang-style-guide/environment/makefile.md) (GO-MAK)
+- [Continuous integration](https://hoardcti.github.io/golang-style-guide/environment/continuous-integration.md) (GO-CI)
+- [Configuration](https://hoardcti.github.io/golang-style-guide/environment/configuration.md) (GO-CFG)
+- [Building](https://hoardcti.github.io/golang-style-guide/environment/building.md) (GO-BLD)
+
+## Structure
+
+- [Repository layout](https://hoardcti.github.io/golang-style-guide/structure/repository-layout.md) (GO-LAY)
+- [Packages and files](https://hoardcti.github.io/golang-style-guide/structure/packages-and-files.md) (GO-PKG)
+- [Main packages](https://hoardcti.github.io/golang-style-guide/structure/main-packages.md) (GO-MAIN)
+- [Build tags, generate and embed](https://hoardcti.github.io/golang-style-guide/structure/build-tags-generate-embed.md) (GO-BTG)
+
+## Formatting and naming
+
+- [Formatting](https://hoardcti.github.io/golang-style-guide/formatting/formatting.md) (GO-FMT)
+- [Imports](https://hoardcti.github.io/golang-style-guide/formatting/imports.md) (GO-IMP)
+- [Identifiers](https://hoardcti.github.io/golang-style-guide/naming/identifiers.md) (GO-NAM)
+- [External names](https://hoardcti.github.io/golang-style-guide/naming/external-names.md) (GO-EXT)
+
+## Documentation
+
+- [Comments](https://hoardcti.github.io/golang-style-guide/documentation/comments.md) (GO-DOC)
+- [Explaining Go](https://hoardcti.github.io/golang-style-guide/documentation/explaining-go.md) (GO-EXP)
+
+## Language
+
+- [Control flow](https://hoardcti.github.io/golang-style-guide/language/control-flow.md) (GO-CTL)
+- [Declarations](https://hoardcti.github.io/golang-style-guide/language/declarations.md) (GO-DEC)
+- [Data types](https://hoardcti.github.io/golang-style-guide/language/data-types.md) (GO-TYP)
+- [Functions and methods](https://hoardcti.github.io/golang-style-guide/language/functions-and-methods.md) (GO-FUN)
+- [Interfaces](https://hoardcti.github.io/golang-style-guide/language/interfaces.md) (GO-IFC)
+- [Generics and iterators](https://hoardcti.github.io/golang-style-guide/language/generics-and-iterators.md) (GO-GNR)
+- [defer, panic and recover](https://hoardcti.github.io/golang-style-guide/language/defer-panic-recover.md) (GO-DPR)
+- [Restricted features](https://hoardcti.github.io/golang-style-guide/language/restricted-features.md) (GO-RST)
+- [Modern Go](https://hoardcti.github.io/golang-style-guide/language/modern-go.md) (GO-MDN)
+
+## Errors and concurrency
+
+- [Errors](https://hoardcti.github.io/golang-style-guide/errors/errors.md) (GO-ERR)
+- [Goroutines](https://hoardcti.github.io/golang-style-guide/concurrency/goroutines.md) (GO-GOR)
+- [Channels](https://hoardcti.github.io/golang-style-guide/concurrency/channels.md) (GO-CHN)
+- [sync and atomics](https://hoardcti.github.io/golang-style-guide/concurrency/sync-and-atomics.md) (GO-SYN)
+- [context](https://hoardcti.github.io/golang-style-guide/concurrency/context.md) (GO-CTX)
+- [Concurrency patterns](https://hoardcti.github.io/golang-style-guide/concurrency/patterns.md) (GO-PAT)
+
+## Standard library
+
+- [Logging](https://hoardcti.github.io/golang-style-guide/standard-library/logging.md) (GO-LOG)
+- [HTTP](https://hoardcti.github.io/golang-style-guide/standard-library/http.md) (GO-HTP)
+- [JSON](https://hoardcti.github.io/golang-style-guide/standard-library/json.md) (GO-JSN)
+- [Time](https://hoardcti.github.io/golang-style-guide/standard-library/time.md) (GO-TIM)
+- [Files and paths](https://hoardcti.github.io/golang-style-guide/standard-library/files-and-paths.md) (GO-FIL)
+- [Command line](https://hoardcti.github.io/golang-style-guide/standard-library/command-line.md) (GO-CLI)
+- [Other standard library packages](https://hoardcti.github.io/golang-style-guide/standard-library/other-packages.md) (GO-LIB)
+
+## Testing
+
+- [Coverage](https://hoardcti.github.io/golang-style-guide/testing/coverage.md) (GO-COV)
+- [Writing tests](https://hoardcti.github.io/golang-style-guide/testing/writing-tests.md) (GO-TST)
+- [Test doubles and fixtures](https://hoardcti.github.io/golang-style-guide/testing/test-doubles-and-fixtures.md) (GO-TDF)
+- [Specialised tests](https://hoardcti.github.io/golang-style-guide/testing/specialised-tests.md) (GO-SPT)
+
+## Security, API design and performance
+
+- [Security](https://hoardcti.github.io/golang-style-guide/security/security.md) (GO-SEC)
+- [API design](https://hoardcti.github.io/golang-style-guide/api-design/api-design.md) (GO-API)
+- [Performance](https://hoardcti.github.io/golang-style-guide/performance/performance.md) (GO-PRF)
+
+## Optional
+
+- [Glossary](https://hoardcti.github.io/golang-style-guide/appendices/glossary.md): Go terms for readers new to Go
+- [AI assistants](https://hoardcti.github.io/golang-style-guide/appendices/ai-assistants.md): keeping AI-written code on style
+- [Ready-to-copy configuration](https://hoardcti.github.io/golang-style-guide/appendices/configs/README.md): .golangci.yml, Makefile, AGENTS.md and more
+- [Changelog](https://hoardcti.github.io/golang-style-guide/CHANGELOG.md)
+- [Contributing](https://hoardcti.github.io/golang-style-guide/CONTRIBUTING.md)

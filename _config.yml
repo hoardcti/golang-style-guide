@@ -1,0 +1,8 @@
+# Jekyll settings for https://hoardcti.github.io/golang-style-guide/.
+# GitHub Pages supplies the theme and plugins; only the differences live here.
+
+# Jekyll skips dotfiles by default, which would leave the ready-to-copy
+# configuration files unreachable on the site.
+include:
+  - .golangci.yml
+  - .testcoverage.yml

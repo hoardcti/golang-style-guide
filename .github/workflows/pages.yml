@@ -1,0 +1,73 @@
+# Builds the guide with GitHub Pages' own Jekyll and publishes it.
+#
+# The classic "deploy from a branch" build can only publish what Jekyll
+# renders, so every page would exist only as HTML. This workflow runs the same
+# Jekyll build, then copies each Markdown source into the site next to its
+# HTML page, so that agents can fetch, for example, both
+# /security/security.html and /security/security.md.
+#
+# Repository settings: Settings → Pages → Build and deployment → Source must be
+# set to "GitHub Actions" for this workflow to publish.
+
+name: Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions: {}
+
+# Only one deployment at a time. A newer push waits for the running deployment
+# instead of cancelling it, so the site is never left half-published.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Configure Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@44a6e6beabd48582f863aeeb6cb2151cc1716697 # v1.0.13
+
+      # Jekyll runs in a container as root, so _site is owned by root.
+      - name: Take ownership of the built site
+        run: sudo chown -R "$(id -u):$(id -g)" _site
+
+      # Serve every Markdown source at its repository path. Relative links
+      # inside the raw files (../errors/errors.md) then resolve to other raw
+      # files on the site.
+      - name: Publish raw Markdown alongside HTML
+        run: |
+          find . -name '*.md' -type f \
+            -not -path './.git/*' -not -path './_site/*' -not -path './.github/*' \
+            -exec cp --parents {} _site/ \;
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

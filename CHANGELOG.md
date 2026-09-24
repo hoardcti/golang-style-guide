@@ -6,6 +6,20 @@ changed and when.
 
 ## Unreleased
 
+### Added
+
+- `SKILL.md`, an agent skill explaining how AI agents should read and apply
+  the guide, and `llms.txt`, an index that points agents to it.
+- Every page is now also published as raw Markdown next to its HTML page.
+  The site is built by a GitHub Actions workflow instead of the classic Pages
+  build.
+- The README has a "For AI agents" section.
+
+### Fixed
+
+- `.golangci.yml` and `.testcoverage.yml` are now published on the site.
+  Jekyll skipped them because their names start with a dot.
+
 ## 2026-09-24
 
 ### Added
