@@ -16,16 +16,16 @@ never "fix" hoardCTI code back to the usual conventions.
 
 ## How to access the guide
 
-The guide is published at **https://hoardcti.github.io/golang-style-guide/**.
+The guide is published at **https://style.hoardcti.com/v1/golang/**.
 Every page is served twice, from the same path:
 
 | Format | URL pattern | Use it for |
 |---|---|---|
-| **Raw Markdown** | `https://hoardcti.github.io/golang-style-guide/<path>.md` | Reading as an agent. Prefer this. |
-| HTML | `https://hoardcti.github.io/golang-style-guide/<path>.html` | Linking for humans. |
+| **Raw Markdown** | `https://style.hoardcti.com/v1/golang/<path>.md` | Reading as an agent. Prefer this. |
+| HTML | `https://style.hoardcti.com/v1/golang/<path>.html` | Linking for humans. |
 
 For example, the Errors page is
-`https://hoardcti.github.io/golang-style-guide/errors/errors.md`.
+`https://style.hoardcti.com/v1/golang/errors/errors.md`.
 
 - Links inside the raw pages are relative (`../errors/errors.md#go-err-004`).
   Resolve them against the URL of the page you are reading and they point to
@@ -35,18 +35,18 @@ For example, the Errors page is
 - The source is also on GitHub at https://github.com/hoardcti/golang-style-guide
   if you can clone or read the repository instead.
 - A short index for language models is at
-  https://hoardcti.github.io/golang-style-guide/llms.txt.
+  https://style.hoardcti.com/v1/golang/llms.txt.
 
 ### Pages to start from
 
 | Page | Raw URL | What it gives you |
 |---|---|---|
-| Contents | [README.md](https://hoardcti.github.io/golang-style-guide/README.md) | Every page, grouped by part |
-| House rules | [foundations/house-rules.md](https://hoardcti.github.io/golang-style-guide/foundations/house-rules.md) | The six rules that differ from common Go |
-| Rule index | [appendices/rule-index.md](https://hoardcti.github.io/golang-style-guide/appendices/rule-index.md) | Every rule ID, level and title in one table |
-| Review checklist | [appendices/review-checklist.md](https://hoardcti.github.io/golang-style-guide/appendices/review-checklist.md) | Every MUST and MUST NOT rule, plus what tools can't check |
-| Principles | [foundations/principles.md](https://hoardcti.github.io/golang-style-guide/foundations/principles.md) | Rule format, levels and precedence |
-| Configuration | [appendices/configs/README.md](https://hoardcti.github.io/golang-style-guide/appendices/configs/README.md) | Ready-to-copy `.golangci.yml`, `Makefile`, `AGENTS.md` and more |
+| Contents | [README.md](https://style.hoardcti.com/v1/golang/README.md) | Every page, grouped by part |
+| House rules | [foundations/house-rules.md](https://style.hoardcti.com/v1/golang/foundations/house-rules.md) | The six rules that differ from common Go |
+| Rule index | [appendices/rule-index.md](https://style.hoardcti.com/v1/golang/appendices/rule-index.md) | Every rule ID, level and title in one table |
+| Review checklist | [appendices/review-checklist.md](https://style.hoardcti.com/v1/golang/appendices/review-checklist.md) | Every MUST and MUST NOT rule, plus what tools can't check |
+| Principles | [foundations/principles.md](https://style.hoardcti.com/v1/golang/foundations/principles.md) | Rule format, levels and precedence |
+| Configuration | [appendices/configs/README.md](https://style.hoardcti.com/v1/golang/appendices/configs/README.md) | Ready-to-copy `.golangci.yml`, `Makefile`, `AGENTS.md` and more |
 
 Don't fetch the whole guide at once. Read the house rules, then only the pages
 that match the code you are working on.
@@ -55,7 +55,7 @@ that match the code you are working on.
 
 ### When writing or changing Go code
 
-1. Read the [house rules](https://hoardcti.github.io/golang-style-guide/foundations/house-rules.md)
+1. Read the [house rules](https://style.hoardcti.com/v1/golang/foundations/house-rules.md)
    if you haven't already in this session. The summary below is not a
    substitute for the page.
 2. Read the pages for the areas the change touches, using the table in
@@ -68,20 +68,20 @@ that match the code you are working on.
 ### When reviewing Go code
 
 1. Work through the
-   [review checklist](https://hoardcti.github.io/golang-style-guide/appendices/review-checklist.md),
+   [review checklist](https://style.hoardcti.com/v1/golang/appendices/review-checklist.md),
    starting with "Check these by hand first": linters can't check those.
 2. Cite rules by ID and link to them, for example: "This breaks
-   [GO-ERR-004](https://hoardcti.github.io/golang-style-guide/errors/errors.md#go-err-004)."
+   [GO-ERR-004](https://style.hoardcti.com/v1/golang/errors/errors.md#go-err-004)."
 3. MUST and MUST NOT breaks block the change. SHOULD breaks need a written
    reason. MAY is a judgement call.
 
 ### When setting up a repository
 
 Copy the files from
-[Ready-to-copy configuration](https://hoardcti.github.io/golang-style-guide/appendices/configs/README.md),
-including [`AGENTS.md`](https://hoardcti.github.io/golang-style-guide/appendices/configs/AGENTS.md)
+[Ready-to-copy configuration](https://style.hoardcti.com/v1/golang/appendices/configs/README.md),
+including [`AGENTS.md`](https://style.hoardcti.com/v1/golang/appendices/configs/AGENTS.md)
 at the repository root, and follow the
-[Environment](https://hoardcti.github.io/golang-style-guide/environment/toolchain.md) pages.
+[Environment](https://style.hoardcti.com/v1/golang/environment/toolchain.md) pages.
 
 ### When the guide is silent
 
@@ -89,13 +89,13 @@ Follow, in order: this guide, then the
 [Google Go Style Guide](https://google.github.io/styleguide/go/), then
 [Go Code Review Comments](https://go.dev/wiki/CodeReviewComments), then
 [Effective Go](https://go.dev/doc/effective_go)
-([GO-GEN-001](https://hoardcti.github.io/golang-style-guide/foundations/principles.md#go-gen-001)).
+([GO-GEN-001](https://style.hoardcti.com/v1/golang/foundations/principles.md#go-gen-001)).
 Stay consistent with the rest of the repository.
 
 ## Finding a rule
 
 The area in a rule ID tells you which page it is on. Prefix each path with
-`https://hoardcti.github.io/golang-style-guide/`.
+`https://style.hoardcti.com/v1/golang/`.
 
 | Area | Page |
 |---|---|
@@ -148,15 +148,15 @@ The area in a rule ID tells you which page it is on. Prefix each path with
 | `PRF` | `performance/performance.md` |
 
 So `GO-SEC-003` is at
-`https://hoardcti.github.io/golang-style-guide/security/security.md#go-sec-003`.
+`https://style.hoardcti.com/v1/golang/security/security.md#go-sec-003`.
 If you don't know the ID, search the
-[rule index](https://hoardcti.github.io/golang-style-guide/appendices/rule-index.md)
+[rule index](https://style.hoardcti.com/v1/golang/appendices/rule-index.md)
 by keyword.
 
 ## House rules in brief
 
 A reminder only. The full rules, with reasons and examples, are on the
-[house rules](https://hoardcti.github.io/golang-style-guide/foundations/house-rules.md) page.
+[house rules](https://style.hoardcti.com/v1/golang/foundations/house-rules.md) page.
 
 1. **R1 Yoda conditions**: `nil != err`, `"" == name`, `0 == len(items)`;
    with two variables, the expected value goes on the left (`want != got`).
@@ -181,7 +181,7 @@ skills directory, for example:
 
 ```bash
 mkdir -p .claude/skills/hoardcti-go-style-guide
-curl -fsSL https://hoardcti.github.io/golang-style-guide/SKILL.md \
+curl -fsSL https://style.hoardcti.com/v1/golang/SKILL.md \
   -o .claude/skills/hoardcti-go-style-guide/SKILL.md
 ```
 

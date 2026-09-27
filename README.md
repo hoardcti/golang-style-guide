@@ -186,15 +186,15 @@ common Go practice.
 ## For AI agents
 
 If you are an AI coding agent, start with the agent skill:
-**[`https://hoardcti.github.io/golang-style-guide/SKILL.md`](https://hoardcti.github.io/golang-style-guide/SKILL.md)**.
+**[`https://style.hoardcti.com/v1/golang/SKILL.md`](https://style.hoardcti.com/v1/golang/SKILL.md)**.
 It explains how to read the guide, find a rule by its
 ID, and apply the guide when writing or reviewing Go code. Save it to your
 skills directory to install it.
 
 - Every page on the site is also served as raw Markdown: swap `.html` for
   `.md` in the URL, for example
-  `https://hoardcti.github.io/golang-style-guide/errors/errors.md`.
-- [`llms.txt`](https://hoardcti.github.io/golang-style-guide/llms.txt) lists
+  `https://style.hoardcti.com/v1/golang/errors/errors.md`.
+- [`llms.txt`](https://style.hoardcti.com/v1/golang/llms.txt) lists
   every page as raw Markdown, with the skill first.
 - Repositories that follow the guide commit
   [`AGENTS.md`](appendices/configs/AGENTS.md) at their root. See [AI
